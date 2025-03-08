@@ -1,5 +1,10 @@
 import pandas as pd
 import os
+import sys
+from pathlib import Path
+
+# Add the parent directory to the Python path
+sys.path.append(str(Path(__file__).parent.parent))
 
 from models import Base, engine, Match, Team
 

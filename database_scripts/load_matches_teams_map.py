@@ -1,6 +1,15 @@
 from sqlalchemy import select
 from sqlalchemy.orm import sessionmaker
 
+
+
+import os
+import sys
+from pathlib import Path
+
+# Add the parent directory to the Python path
+sys.path.append(str(Path(__file__).parent.parent))
+
 from models import Base, engine, matches_to_teams, Match
 
 

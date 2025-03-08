@@ -1,6 +1,13 @@
 import pandas as pd
-from models import Base, engine
 import os
+import sys
+from pathlib import Path
+
+# Add the parent directory to the Python path
+sys.path.append(str(Path(__file__).parent.parent))
+
+from models import Base, engine
+
 DATA_PATH = os.environ['DATA_PATH']
 DATA_PREFIX = os.environ['DATA_PREFIX']
 
